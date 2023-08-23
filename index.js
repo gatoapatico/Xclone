@@ -47,7 +47,7 @@ function handleRetweetClick(tweetId){
 }
 
 function handleReplyClick(replyId){
-    document.getElementById('replies-'+replyId).classList.toggle('hidden');
+    document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
 }
 
 function handleTweetBtnClick(){
@@ -82,7 +82,8 @@ function getFeedHtml(){
         if(tweet.isLiked){
             likeIconClass = 'liked';
         }
-        else if(tweet.isRetweeted){
+        
+        if(tweet.isRetweeted){
             retweetIconClass = 'retweeted';
         }
 
